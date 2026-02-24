@@ -1,0 +1,15 @@
+Sample run (shortened)
+
+START: Finance_Database
+TARGET: vault:secrets
+
+=== Shortest Path Result (Dijkstra) ===
+[+] Path found: Finance_Database -> vault:secrets
+    Total cost: 55.00
+    Hops      : 11
+
+Steps:
+  01. Finance_Database -> srv:fileserver | Result =service_account_reuse | w=2
+  02. srv:fileserver -> net:core | Result =route_to_core | w=30
+  03. net:core -> attacker | Result =route_from_core | w=10
+  ...
